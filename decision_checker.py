@@ -42,7 +42,7 @@ data= requests.get(base_url+visa_decision_url,verify=False)
 
 soup = BeautifulSoup(data.text,'html.parser')
 decisions_pdf = soup.find_all('div',class_= "gen-content-landing__block")
-decisions_pdf = decisions_pdf[1:]
+decisions_pdf = decisions_pdf[1:10]
 result={}
 
 #print(decisions_pdf)
